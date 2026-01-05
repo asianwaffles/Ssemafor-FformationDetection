@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  f_formation_detection:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: f_formation_detection_humble
+    environment:
+      - ROS_DOMAIN_ID=0
+      - ROS_LOCALHOST_ONLY=0
+    network_mode: host
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./config:/root/ros2_ws/src/f_formation_detection/config
+    display: ${DISPLAY}
+    privileged: true
+    stdin_open: true
+    tty: true
+    command: ros2 launch f_formation_detection formation_detector_launch.py image_topic:=/camera/image_raw

@@ -1,0 +1,23 @@
+# Core dependencies
+rclpy>=0.13.0
+sensor-msgs>=0.0.0
+geometry-msgs>=0.0.0
+cv-bridge>=3.0.0
+
+# Computer Vision & ML
+opencv-python>=4.8.0
+mediapipe>=0.10.0
+ultralytics>=8.0.0
+numpy==1.26.4
+scikit-learn>=1.0.0
+
+# Optional for better YOLO performance
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Development
+pytest>=7.0.0
+pytest-cov>=4.0.0
+flake8>=5.0.0
+black>=22.0.0
