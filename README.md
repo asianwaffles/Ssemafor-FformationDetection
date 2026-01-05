@@ -1,5 +1,5 @@
 # F-Formation Detection - ROS 2 Humble
-
+Note: These files were executed on a Virtual Machine, some stuff is hardcoded to a synced folder that I was using to transfer files into my VM.
 Real-time social formation detection for robots using YOLO and DBSCAN clustering.
 
 ## Features
@@ -35,7 +35,7 @@ cd f-formation-detection
 # 2. Install dependencies
 pip3 install -r requirements.txt
 
-# 3. Install NumPy 1.26.4 (IMPORTANT - must be last!)
+# 3. Install NumPy 1.26.4 (requirements should install this but sometimes it bugs out idk why)
 pip3 install 'numpy==1.26.4' --force-reinstall
 
 # 4. Verify imports
@@ -44,7 +44,7 @@ python3 -c "from f_formation_detection.f_formation_detector import FFormationDet
 
 ### Usage
 
-**Terminal 1 - Start Detector Node:**
+**Terminal 1 - Detector Node:**
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -55,7 +55,6 @@ python3 -m f_formation_detection.groupingimg
 **Terminal 2 - Publish Images:**
 
 Save this as `publish_images.py`:
-
 ```python
 import cv2, rclpy
 from sensor_msgs.msg import Image
@@ -90,10 +89,9 @@ export PYTHONPATH=/media/sf_synced:$PYTHONPATH
 python3 publish_images.py
 ```
 
-**Terminal 3 - Save Annotated Images (Optional):**
+**Terminal 3 - Save Annotated Images:**
 
 Save this as `save_images.py`:
-
 ```python
 import rclpy
 from sensor_msgs.msg import Image
@@ -179,25 +177,9 @@ requirements.txt                   # Python dependencies
 - numpy==1.26.4 (CRITICAL - not 2.x)
 - scikit-learn>=1.0.0
 
-## Troubleshooting
-
-### "No module named 'f_formation_detection'"
-
-```bash
-export PYTHONPATH=/path/to/f-formation-detection:$PYTHONPATH
-```
-
-### "AttributeError: module 'numpy' has no attribute '_ARRAY_API'"
-
-```bash
-pip3 uninstall numpy -y
-pip3 install 'numpy==1.26.4' --force-reinstall
-```
-
 ## License
 
 MIT License
 
 ## Support
-
 For issues or questions, open an issue on GitHub.
