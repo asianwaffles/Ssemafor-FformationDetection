@@ -4,18 +4,16 @@ Real-time social formation detection for robots using YOLO and DBSCAN clustering
 
 ## Features
 
-- 🎯 **YOLO Person Detection** - Fast and accurate person detection
-- 👥 **DBSCAN Clustering** - Groups nearby people together
-- �� **Formation Classification** - Detects formation types:
+- **YOLO Person Detection** - Fast and accurate person detection
+- **DBSCAN Clustering** - Groups nearby people together
+- **Formation Classification** - Detects formation types:
   - Vis-à-vis (face-to-face)
   - Side-by-side
   - L-shaped
   - Circular
   - None (no formation)
-- 🤖 **ROS 2 Humble** - Full ROS 2 integration
-- 📊 **Real-time Visualization** - Annotated output with boxes and labels
-
-## Quick Start
+- **ROS 2 Humble** - Full ROS 2 integration
+- **Real-time Visualization** - Annotated output with boxes and labels
 
 ### Installation
 
